@@ -29,27 +29,28 @@ export class LocalisationPage {
     longitude: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private geolocation: Geolocation) {
-      this.getGeolocation().then((res) => {
-          this.latitude = res.coords.latitude;
-          this.longitude = res.coords.longitude;
-      }).catch((error) => {
-          console.error('Error getting location', error);
-      });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LocalisationPage');
-    this.loadMap();
+      this.getGeolocation().then((res) => {
+          this.latitude = res.coords.latitude;
+          this.longitude = res.coords.longitude;
+          this.loadMap();
+      }).catch((error) => {
+          console.error('Error getting location', error);
+      });
   }
 
     loadMap() {
 
         // This code is necessary for browser
         Environment.setEnv({
-            'API_KEY_FOR_BROWSER_DEBUG': 'API_KEY'
+            'API_KEY_FOR_BROWSER_DEBUG': 'AIzaSyBP2EtUdE4HfTno-u7NoqK9tF18Z_llL48'
         });
 
         let latLng = new LatLng(this.latitude, this.longitude);
+        console.error(latLng);
 
         let mapOptions: GoogleMapOptions = {
             camera: {
