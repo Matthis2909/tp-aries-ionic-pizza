@@ -46,7 +46,7 @@ export class LocalisationPage {
 
         // This code is necessary for browser
         Environment.setEnv({
-            'API_KEY_FOR_BROWSER_DEBUG': 'AIzaSyBP2EtUdE4HfTno-u7NoqK9tF18Z_llL48'
+            'API_KEY_FOR_BROWSER_DEBUG': 'API_KEY'
         });
 
         let latLng = new LatLng(this.latitude, this.longitude);
