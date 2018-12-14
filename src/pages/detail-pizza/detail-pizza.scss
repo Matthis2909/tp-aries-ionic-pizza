@@ -1,0 +1,22 @@
+page-detail-pizza {
+ ion-title {
+   text-transform: uppercase;
+ }
+  .flex-container {
+    display: flex;
+    flex-align: row;
+    align-items: center;
+
+    .item {
+      margin-right: 5px;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+
+
+}
